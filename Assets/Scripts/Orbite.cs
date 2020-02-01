@@ -15,6 +15,6 @@ public class Orbite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(direction.normalized*speed);
+        transform.Rotate(direction.normalized*speed /** Time.deltaTime*/);
     }
 }
