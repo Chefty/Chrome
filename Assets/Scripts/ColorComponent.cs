@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class ColorComponent : MonoBehaviour
 {
     private MeshRenderer m_meshRenderer;
-    private Material m_material;
     private Animator m_animator;
     private AudioSource m_audioSource;
     private Collider m_collider;
-
+    private ElementsColorCheck m_elementsColorCheck;
 
     // Start is called before the first frame update
     void Start()
     {
         m_meshRenderer = GetComponent<MeshRenderer>();
-        m_material = m_meshRenderer.sharedMaterial;
         m_animator = GetComponent<Animator>();
         m_audioSource = GetComponent<AudioSource>();
         m_collider = GetComponent<Collider>();
@@ -26,21 +26,19 @@ public class ColorComponent : MonoBehaviour
         if (other.CompareTag("PaintingTool") && gameObject.CompareTag("PlanetElements"))
         {
             Material paintingToolMaterial = other.GetComponent<MeshRenderer>().sharedMaterial;
-            if (m_material != paintingToolMaterial)
+            if (m_meshRenderer.sharedMaterial != paintingToolMaterial)
             {
                 print("Set painting material");
-                m_meshRenderer.sharedMaterial = paintingToolMaterial;
-                m_material = paintingToolMaterial;
+                ElementsColorCheck.instance.CheckElementsColorMatch(gameObject.transform.parent.name, paintingToolMaterial, m_meshRenderer);
             }
         }
         if (other.CompareTag("ColorPicker"))
         {
             Material paintingMaterial = other.GetComponent<MeshRenderer>().sharedMaterial;
-            if (m_material != paintingMaterial)
+            if (m_meshRenderer.sharedMaterial != paintingMaterial)
             {
                 print("Get painting material");
                 m_meshRenderer.sharedMaterial = paintingMaterial;
-                m_material = paintingMaterial;
             }
         }
     }
