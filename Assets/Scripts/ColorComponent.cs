@@ -23,21 +23,20 @@ public class ColorComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Brush is interacting with planet elements
         if (other.CompareTag("PaintingTool") && gameObject.CompareTag("PlanetElements"))
         {
             Material paintingToolMaterial = other.GetComponent<MeshRenderer>().sharedMaterial;
             if (m_meshRenderer.sharedMaterial != paintingToolMaterial)
             {
-                print("Set painting material");
                 ElementsColorCheck.instance.CheckElementsColorMatch(gameObject.transform.parent.name, paintingToolMaterial, m_meshRenderer);
             }
         }
-        if (other.CompareTag("ColorPicker"))
+        if (other.CompareTag("ColorPicker")) //Getting colors from meteor palette with the brush
         {
             Material paintingMaterial = other.GetComponent<MeshRenderer>().sharedMaterial;
             if (m_meshRenderer.sharedMaterial != paintingMaterial)
             {
-                print("Get painting material");
                 m_meshRenderer.sharedMaterial = paintingMaterial;
             }
         }
