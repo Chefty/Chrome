@@ -205,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451164722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 668040920}
@@ -343,9 +343,10 @@ GameObject:
   - component: {fileID: 668040919}
   - component: {fileID: 668040918}
   - component: {fileID: 668040917}
+  - component: {fileID: 668040921}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: PlanetElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,7 +359,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668040916}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -424,6 +425,18 @@ Transform:
   m_Father: {fileID: 451164723}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668040921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668040916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b0a75a48d79a429b4e41f64c28b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &777384702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5484267734619164919, guid: 2560c0b6edf71f742876b1f78d5811a0,
@@ -539,6 +552,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2560c0b6edf71f742876b1f78d5811a0, type: 3}
+--- !u!1 &1575388139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3983916405065903161, guid: 2048b538fbcf5834b96f440da95b1d73,
+    type: 3}
+  m_PrefabInstance: {fileID: 1759805503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1575388141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575388139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b0a75a48d79a429b4e41f64c28b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1575388142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575388139}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!135 &1575388143
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575388139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11710722
+  m_Center: {x: -0.7710514, y: 0.035360377, z: 0.0037434858}
 --- !u!1001 &1600724040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -780,11 +840,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 970547103698669796, guid: 2048b538fbcf5834b96f440da95b1d73,
-        type: 3}
-      propertyPath: m_Name
-      value: OVRCameraRig
-      objectReference: {fileID: 0}
     - target: {fileID: 970547103698373828, guid: 2048b538fbcf5834b96f440da95b1d73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,6 +894,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970547103698669796, guid: 2048b538fbcf5834b96f440da95b1d73,
+        type: 3}
+      propertyPath: m_Name
+      value: OVRCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078193082285549427, guid: 2048b538fbcf5834b96f440da95b1d73,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983916405065903161, guid: 2048b538fbcf5834b96f440da95b1d73,
+        type: 3}
+      propertyPath: m_TagString
+      value: PaintingTool
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2048b538fbcf5834b96f440da95b1d73, type: 3}
