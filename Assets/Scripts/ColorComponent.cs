@@ -87,12 +87,20 @@ public class ColorComponent : MonoBehaviour
             if (m_meshRenderer != null &&
                 m_meshRenderer.sharedMaterial != paintingToolMaterial)
             {
-                ElementsColorCheck.instance.CheckElementsColorMatch(
-                    gameObject.transform.parent.name,
-                    paintingToolMaterial,
-                    m_meshRenderer);
-
-
+                if (gameObject.name.Contains("Ocean"))
+                {
+                    ElementsColorCheck.instance.CheckElementsColorMatch(
+                        gameObject.name,
+                        paintingToolMaterial,
+                        m_meshRenderer);
+                }
+                else
+                {
+                    ElementsColorCheck.instance.CheckElementsColorMatch(
+                        gameObject.transform.parent.name,
+                        paintingToolMaterial,
+                        m_meshRenderer);
+                }
             }
             else if (m_SkinedmeshRenderer != null &&
                 m_SkinedmeshRenderer.sharedMaterial != paintingToolMaterial)
