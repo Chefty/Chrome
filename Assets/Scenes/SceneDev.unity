@@ -20176,7 +20176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8dac7fe018b524240a9142fe47c96068, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.469
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20924,7 +20924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Earth: {fileID: 726559212}
-  EarthRotSpeed: 5
+  EarthRotSpeed: 1
   CustomRotateTime: 0
   CurrentRotateTime: 0
   IsCustomRotating: 0
@@ -20982,13 +20982,27 @@ MonoBehaviour:
   - {fileID: 3741950908426235368, guid: f40ebfb48087449478e5575f65fba080, type: 3}
   - {fileID: 7094794000522178727, guid: 18d0416c6d4ef9c4e8ff35fda304e71c, type: 3}
   - {fileID: 1476409329892450656, guid: c2a359ffb3955ff47a825ca6fde56dc2, type: 3}
-  - {fileID: 3051778175437931199, guid: 1dfdf1bc751f9b6468c2cc0500cfb760, type: 3}
+  - {fileID: 8590010391449228010, guid: e5c72599b65b1c94d8ff9be9e1b6d123, type: 3}
   - {fileID: 6903753822289374107, guid: e10902ddc3c848744bc6c26fa3dc19d5, type: 3}
   - {fileID: 6709940062967194159, guid: 17a1fd3c38af09c4484c8857c0f9b04f, type: 3}
   - {fileID: 8835729442541358630, guid: d1272d43049c54044870c58081ca3465, type: 3}
   - {fileID: 6749518614232333756, guid: cba352359876fd0479722c1db5cda3ec, type: 3}
   - {fileID: 502102332279604338, guid: 1fc3edc39212a8e489a083e4ef8dd7fd, type: 3}
   - {fileID: 7915654715690564624, guid: ab30ac5697a8f164c8692e77d653a9f5, type: 3}
+  - {fileID: 5492394201443157755, guid: f6764fe9a0a09bc4da6e50aa8f269234, type: 3}
+  - {fileID: 2592553827420136880, guid: f15fa99636e430c43b2c3ab9ad1deb43, type: 3}
+  - {fileID: 8403792893387284403, guid: 23cab70ccc528da43bd3ca6bee7d8e42, type: 3}
+  - {fileID: 4711769659815357770, guid: 533bec7dbb7cd9145a6829b4618a52b1, type: 3}
+  - {fileID: 5434145847427234202, guid: 5405d0dc6ef4e934282a6c69faf65b6d, type: 3}
+  - {fileID: 3387095690166707916, guid: b08849bf05ec83a48a2d510f86862014, type: 3}
+  - {fileID: 8807672814413824289, guid: bc69d2f99ef0f034094964b3be5cb154, type: 3}
+  - {fileID: 6291882561732677136, guid: 491cd36916977d44f8d7565297d100a1, type: 3}
+  - {fileID: 8412743084702643231, guid: aba623148b773094c82912d113d7efd1, type: 3}
+  - {fileID: 5483699652688773641, guid: 26c57f03d70dbc94e8edffa261ee1625, type: 3}
+  - {fileID: 1782421895827377064, guid: e8b3ad8db99748c409be2167b30add83, type: 3}
+  - {fileID: 2026851953259380280, guid: 05410e3f5edd81443aced775d1a1b04a, type: 3}
+  - {fileID: 6289426063837071737, guid: e30a689b25017f148861af0c34a49ea9, type: 3}
+  - {fileID: 3534647241146548226, guid: 261fb3a245e36af4f85198ab8b5c06a4, type: 3}
 --- !u!1 &6783611641674227558
 GameObject:
   m_ObjectHideFlags: 0

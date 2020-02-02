@@ -25,13 +25,16 @@ public class CustomEarthSpin : MonoBehaviour
         {
 
         }
-
         GenericEarthRotation();
+        
+        //Increase rotation speed with time
+        if (EarthRotSpeed < 5f)
+            EarthRotSpeed += .02f * Time.deltaTime;
     }
 
     void GenericEarthRotation()
     {
-        Earth.Rotate(Vector3.up * (EarthRotSpeed * Time.deltaTime));
+        Earth.Rotate(new Vector3(1f, 1f, 0f) * (EarthRotSpeed * Time.deltaTime));
     }
 
     private void OnTriggerEnter(Collider other)

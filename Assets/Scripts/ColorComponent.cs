@@ -87,7 +87,7 @@ public class ColorComponent : MonoBehaviour
             if (m_meshRenderer != null &&
                 m_meshRenderer.sharedMaterial != paintingToolMaterial)
             {
-                if (gameObject.name.Contains("Ocean"))
+                if (gameObject.name.Contains("Ocean") || gameObject.name.Contains("Terre"))
                 {
                     ElementsColorCheck.instance.CheckElementsColorMatch(
                         gameObject.name,
