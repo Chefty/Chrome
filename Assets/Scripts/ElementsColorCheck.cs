@@ -78,7 +78,7 @@ public class ElementsColorCheck : MonoBehaviour
         Material tmpElementMaterial;
         //Check over all possible color code we defined as element's expected color
         //If it's a match we set the designed element to rightful default matching material
-        if (paintingToolMaterial.name == "Grey" && (elementName.Contains("Building") || elementName.Contains("Mountains")))
+        if (paintingToolMaterial.name == "Grey" && (elementName.Contains("Building") || elementName.Contains("Mountain")))
         {
             tmpElementMaterial = FindElementDefaultMaterial(elementName);
             if (tmpElementMaterial != null)
