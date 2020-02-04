@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114018fb630384143b082ef4394c9616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
+  direction: {x: 0, y: 1, z: 0}
+  speed: 1
 --- !u!1 &1672003842314577192
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,9 +60,10 @@ GameObject:
   - component: {fileID: 1672003842314478470}
   - component: {fileID: 1672003842314577191}
   - component: {fileID: 1672003842314577190}
+  - component: {fileID: 671673540}
   m_Layer: 0
   m_Name: Comet
-  m_TagString: Untagged
+  m_TagString: ColorPicker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +76,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672003842314577192}
   m_LocalRotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002668798, y: -0.0446579, z: -0.8301637}
+  m_LocalPosition: {x: 0.002668798, y: -0.0446579, z: -3.67}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1672003841284980448}
@@ -254,5 +255,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b9812b634c5e54bb6b221e5b49d128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  interval: 1
+  speed: 1
+  interval: 0.3
+--- !u!135 &671673540
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672003842314577192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.52554905
+  m_Center: {x: -0.002668783, y: 0.044657916, z: 0.011163712}
