@@ -41,7 +41,7 @@ public class ElementsColorCheck : MonoBehaviour
                 }
                 else
                 {
-                    print(elements[i].name);
+                    print("Could not add" + elements[i].name + "to the dictionnary. Missing renderer ?");
                 }
             }
         }
@@ -213,7 +213,7 @@ public class ElementsColorCheck : MonoBehaviour
             }
             else
             {
-                print("Color comp == null");
+                print("ColorComponent.cs is missing from" + rend.gameObject + ", please fixe this issue.");
             }
         }
     }

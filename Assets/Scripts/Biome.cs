@@ -44,7 +44,6 @@ public class Biome : MonoBehaviour
 
         for (int i = 0; i < Instances.Count; i++)
         {
-            print(Instances[i].name);
             Instances[i].ForceFinish();
         }
 

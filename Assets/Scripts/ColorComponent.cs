@@ -33,7 +33,8 @@ public class ColorComponent : MonoBehaviour
         isDone = true;
 
         var mat = ElementsColorCheck.instance.FindElementDefaultMaterial(gameObject.transform.parent.name);
-        print(mat == null ? "OK" : "KO");
+        //Debug only
+        //print(mat == null ? "OK" : "KO");
 
         if (gameObject.transform.parent.name == "World")
         {
