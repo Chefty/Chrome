@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114018fb630384143b082ef4394c9616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0.2, y: 0, z: 0}
-  speed: 0.46
+  direction: {x: 0.2, y: 0.2, z: 0}
+  speed: 0.2
 --- !u!33 &1476409330828974704
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91,11 +91,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Name
-      value: Parrot_fly_animation_orrigin
+      value: BirdGreen
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
+      propertyPath: m_TagString
+      value: PlanetElements
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -157,6 +161,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0711aaeb26470f846905ca6d8d532e82, type: 2}
+    - target: {fileID: 9500000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -164,10 +172,6 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
-      propertyPath: m_TagString
-      value: PlanetElements
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}

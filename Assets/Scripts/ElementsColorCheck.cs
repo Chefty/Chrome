@@ -125,15 +125,7 @@ public class ElementsColorCheck : MonoBehaviour
             rend.sharedMaterial = correctMaterial;
 
             var colorcomp = rend.gameObject.GetComponent<ColorComponent>();
-
-            if (colorcomp != null)
-            {
-                colorcomp.ForceFinish();
-            }
-            else
-            {
-                print("ColorComponent.cs is missing from" + rend.gameObject + ", please fixe this issue.");
-            }
+            colorcomp.Colored();
         }
     }
 

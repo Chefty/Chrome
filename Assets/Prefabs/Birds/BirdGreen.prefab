@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476409329892450656}
-  m_LocalRotation: {x: -0.24926263, y: 0.427292, z: 0.12381636, w: 0.8602088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 1476409330479506145}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -32.32, y: 52.83, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1476409329892450658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476409329892450656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 114018fb630384143b082ef4394c9616, type: 3}
   m_Name: 
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 0}
+  m_audioSources: []
   isDone: 0
 --- !u!1001 &1476409330479380581
 PrefabInstance:
@@ -92,10 +93,6 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Name
       value: BirdGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_TagString
@@ -158,21 +155,17 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0711aaeb26470f846905ca6d8d532e82, type: 2}
-    - target: {fileID: 9500000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ccc480f6f5ecf0d418e4b32f85019bfd, type: 2}
     - target: {fileID: 13700000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c090ed48749d4bd46a7aae57ce0ab8dd, type: 2}
-    - target: {fileID: 13700000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c28d41b449a0844ab2951d7bc577e0, type: 3}
 --- !u!1 &1476409330479283905 stripped

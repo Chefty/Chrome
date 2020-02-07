@@ -10,31 +10,41 @@ public class ColorComponent : MonoBehaviour
     public Animator m_animator;
     public AudioSource[] m_audioSources;
     private Collider m_collider;
-    private ElementsColorCheck m_elementsColorCheck;
+    public delegate void ColoredComponenEventHandler();
+    public event ColoredComponenEventHandler ColoredComponent;
 
     public bool isDone;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_SkinedmeshRenderer = GetComponent<SkinnedMeshRenderer>();
-        m_meshRenderer = GetComponent<MeshRenderer>();
+        m_renderer = GetComponent<Renderer>();
         if (m_animator == null)
         {
             m_animator = GetComponent<Animator>();
         }
         m_audioSources = GetComponentsInChildren<AudioSource>();
         m_collider = GetComponent<Collider>();
+        // Mean animator has to be on parent's GO
+        if (gameObject.transform.parent != null)
+            m_animator = gameObject.transform.parent.GetComponent<Animator>();
     }
-    public void Finish()
+    public void Colored()
     {
         isDone = true;
+        OnComponentColored();
+    }
 
-        StartAnimation();
+    protected virtual void OnComponentColored()
+    {
+        ColoredComponent?.Invoke();
     }
 
     public void ForceFinish()
     {
+        StartAnimation();
+        StartAudio();
+
         if (isDone)
             return;
         else
@@ -68,8 +78,6 @@ public class ColorComponent : MonoBehaviour
             print("Renderer compoenent is missing on planet element " + gameObject.name);
             return;
         }
-        StartAnimation();
-        StartAudio();
     }
 
     void StartAnimation()

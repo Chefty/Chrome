@@ -11,9 +11,13 @@ public class Biome : MonoBehaviour
     {
         Instances = new List<ColorComponent>();
         Instances.AddRange(GetComponentsInChildren<ColorComponent>());
+        for (int i = 0; i < Instances.Count; i++)
+        {
+            Instances[i].ColoredComponent += CheckPlanetElementsStatus;
+        }
     }
 
-    private void Update()
+    public void CheckPlanetElementsStatus()
     {
         if (isDone)
             return;
@@ -26,22 +30,16 @@ public class Biome : MonoBehaviour
             {
                 AmountFinished++;
 
-                if (AmountFinished >= Instances.Count / 2)
+                if (AmountFinished >= Instances.Count / 2)  
                 {
                     Validate();
-                }
+                } 
             }
         }
     }
 
     private void Validate()
     {
-        if (isDone)
-            return;
-
-        // Activate animations
-        isDone = true;
-
         for (int i = 0; i < Instances.Count; i++)
         {
             Instances[i].ForceFinish();
