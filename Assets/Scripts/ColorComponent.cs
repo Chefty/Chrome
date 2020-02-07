@@ -7,8 +7,6 @@ using UnityEngine;
 public class ColorComponent : MonoBehaviour
 {
     private Renderer m_renderer;
-    public Animator m_animator;
-    public AudioSource[] m_audioSources;
     private Collider m_collider;
     public delegate void ColoredComponenEventHandler();
     public event ColoredComponenEventHandler ColoredComponent;
@@ -19,16 +17,9 @@ public class ColorComponent : MonoBehaviour
     void Start()
     {
         m_renderer = GetComponent<Renderer>();
-        if (m_animator == null)
-        {
-            m_animator = GetComponent<Animator>();
-        }
-        m_audioSources = GetComponentsInChildren<AudioSource>();
         m_collider = GetComponent<Collider>();
-        // Mean animator has to be on parent's GO
-        if (gameObject.transform.parent != null)
-            m_animator = gameObject.transform.parent.GetComponent<Animator>();
     }
+
     public void Colored()
     {
         isDone = true;
@@ -42,9 +33,6 @@ public class ColorComponent : MonoBehaviour
 
     public void ForceFinish()
     {
-        StartAnimation();
-        StartAudio();
-
         if (isDone)
             return;
         else
@@ -77,31 +65,6 @@ public class ColorComponent : MonoBehaviour
         {
             print("Renderer compoenent is missing on planet element " + gameObject.name);
             return;
-        }
-    }
-
-    void StartAnimation()
-    {
-        //Start current GameObject animation (disabled by default)
-        if (m_animator != null)
-        {
-            m_animator.enabled = true;
-        }
-        //If current gameObject is a bird we also start his orbit
-        if (gameObject.transform.parent.name.Contains("Bird"))
-        {
-            gameObject.transform.parent.parent.GetComponent<Orbite>().enabled = true;
-        }
-    }
-
-    void StartAudio()
-    {
-        if (m_audioSources.Length > 0)
-        {
-            for (int i = 0; i < m_audioSources.Length; i++)
-            {
-                m_audioSources[i].Play();
-            }
         }
     }
 
