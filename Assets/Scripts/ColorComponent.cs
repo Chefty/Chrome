@@ -8,11 +8,30 @@ public class ColorComponent : MonoBehaviour
 {
     private Renderer m_renderer;
     public Animator m_animator;
-    private AudioSource m_audioSource;
+    public AudioSource[] m_audioSources;
     private Collider m_collider;
     private ElementsColorCheck m_elementsColorCheck;
 
     public bool isDone;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_SkinedmeshRenderer = GetComponent<SkinnedMeshRenderer>();
+        m_meshRenderer = GetComponent<MeshRenderer>();
+        if (m_animator == null)
+        {
+            m_animator = GetComponent<Animator>();
+        }
+        m_audioSources = GetComponentsInChildren<AudioSource>();
+        m_collider = GetComponent<Collider>();
+    }
+    public void Finish()
+    {
+        isDone = true;
+
+        StartAnimation();
+    }
 
     public void ForceFinish()
     {
@@ -50,6 +69,7 @@ public class ColorComponent : MonoBehaviour
             return;
         }
         StartAnimation();
+        StartAudio();
     }
 
     void StartAnimation()
@@ -66,19 +86,15 @@ public class ColorComponent : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void StartAudio()
     {
-        m_renderer = GetComponent<Renderer>();
-        if (m_animator == null)
+        if (m_audioSources.Length > 0)
         {
-            m_animator = GetComponent<Animator>();
+            for (int i = 0; i < m_audioSources.Length; i++)
+            {
+                m_audioSources[i].Play();
+            }
         }
-        m_audioSource = GetComponent<AudioSource>();
-        m_collider = GetComponent<Collider>();
-        // Mean animator has to be on parent's GO
-        if (gameObject.transform.parent != null)
-            m_animator = gameObject.transform.parent.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -86,11 +102,13 @@ public class ColorComponent : MonoBehaviour
         //Brush is interacting with planet elements
         if (other.CompareTag("PaintingTool") && gameObject.CompareTag("PlanetElements"))
         {
+            if (isDone)
+                return;
             Material paintingToolMaterial = other.GetComponent<MeshRenderer>().sharedMaterial;
             if (m_renderer != null &&
                 m_renderer.sharedMaterial != paintingToolMaterial)
             {
-                if (gameObject.name.Contains("Ocean") || gameObject.name.Contains("Terre"))
+                if (gameObject.name.Contains("Ocean") || gameObject.name.Contains("Biome"))
                 {
                     ElementsColorCheck.instance.CheckElementsColorMatch(
                         gameObject.name,

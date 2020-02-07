@@ -12,6 +12,13 @@ public class ElementsColorCheck : MonoBehaviour
 
     private void Awake()
     {
+        //Important note: place prefabs folder in a folder called "Resources"
+        Object[] subListObjects = Resources.LoadAll("WorldPrefabs", typeof(GameObject));
+        foreach (GameObject subListObject in subListObjects)
+        {
+            GameObject go = (GameObject)subListObject;
+            elements.Add(go);
+        }
         if (instance != null)
         {
             Destroy(gameObject);
