@@ -6,12 +6,12 @@ using System.Linq;
 public class ElementsColorCheck : MonoBehaviour
 {
     public static ElementsColorCheck instance;
-    public List<GameObject> elements;
-    
-    public Dictionary<string, Material> m_elementsMaterials;
+    private List<GameObject> elements;
+    private Dictionary<string, Material> m_elementsMaterials;
 
     private void Awake()
     {
+        elements = new List<GameObject>();
         //Important note: place prefabs folder in a folder called "Resources"
         Object[] subListObjects = Resources.LoadAll("WorldPrefabs", typeof(GameObject));
         foreach (GameObject subListObject in subListObjects)
