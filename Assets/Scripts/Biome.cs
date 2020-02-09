@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Biome : MonoBehaviour
 {
+    public float CompletionPercentage;
     private List<ColorComponent> Instances;
     private Animator[] m_animators;
     private AudioSource[] m_audioSources;
@@ -36,13 +37,13 @@ public class Biome : MonoBehaviour
             if (Instances[i].isDone)
             {
                 AmountFinished++;
-
-                if (AmountFinished >= Instances.Count / 2)  
-                {
-                    Validate();
-                    return;
-                } 
             }
+        }
+
+        if (AmountFinished >= Instances.Count * (CompletionPercentage / 100f))
+        {
+            Validate();
+            return;
         }
     }
 
