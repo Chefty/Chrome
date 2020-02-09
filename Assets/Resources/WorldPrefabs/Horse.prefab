@@ -628,9 +628,10 @@ GameObject:
   - component: {fileID: 9168577534179709673}
   - component: {fileID: 9168577534185407383}
   - component: {fileID: 9168577535353114336}
+  - component: {fileID: 6116257241092017220}
   m_Layer: 0
-  m_Name: Hourse_body
-  m_TagString: ColorPicker
+  m_Name: Horse
+  m_TagString: PlanetElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,6 +779,19 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 2
   m_Center: {x: 0.0013341884, y: 0.12834226, z: -0.03}
+--- !u!114 &6116257241092017220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168577534180134601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b0a75a48d79a429b4e41f64c28b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDone: 0
 --- !u!1 &9168577534180134603
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +803,7 @@ GameObject:
   - component: {fileID: 9168577534179709675}
   - component: {fileID: 9168577534189534551}
   m_Layer: 0
-  m_Name: Horse_Animation
+  m_Name: Horse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

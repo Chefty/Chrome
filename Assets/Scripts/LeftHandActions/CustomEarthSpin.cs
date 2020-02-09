@@ -34,7 +34,8 @@ public class CustomEarthSpin : MonoBehaviour
 
     void GenericEarthRotation()
     {
-        Earth.Rotate(new Vector3(1f, 1f, 0f) * (EarthRotSpeed * Time.deltaTime));
+        if (Earth != null)
+            Earth.Rotate(new Vector3(1f, 1f, 0f) * (EarthRotSpeed * Time.deltaTime));
     }
 
     private void OnTriggerEnter(Collider other)

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Biome : MonoBehaviour
 {
-    public List<ColorComponent> Instances;
-    public Animator[] m_animators;
-    public AudioSource[] m_audioSources;
-    bool isDone;
+    public float CompletionPercentage;
+    private List<ColorComponent> Instances;
+    private Animator[] m_animators;
+    private AudioSource[] m_audioSources;
+    private bool isDone;
+    private CheckBiomesStatus checkBiomesStatus;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Biome : MonoBehaviour
         // We get animators and audio sources in childrens only for biomes (contain all planet elements)
         m_animators = GetComponentsInChildren<Animator>();
         m_audioSources = GetComponentsInChildren<AudioSource>();
+        checkBiomesStatus = GetComponentInParent<CheckBiomesStatus>();
     }
 
     public void CheckPlanetElementsStatus()
@@ -34,12 +37,13 @@ public class Biome : MonoBehaviour
             if (Instances[i].isDone)
             {
                 AmountFinished++;
-
-                if (AmountFinished >= Instances.Count / 2)  
-                {
-                    Validate();
-                } 
             }
+        }
+
+        if (AmountFinished >= Instances.Count * (CompletionPercentage / 100f))
+        {
+            Validate();
+            return;
         }
     }
 
@@ -53,6 +57,8 @@ public class Biome : MonoBehaviour
         GetComponent<ColorComponent>().ForceFinish();
         StartAnimation();
         StartAudio();
+        checkBiomesStatus.BiomeCompleted();
+        isDone = true;
     }
 
     void StartAnimation()
