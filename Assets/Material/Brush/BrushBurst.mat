@@ -95,4 +95,4 @@ Material:
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _TintColor: {r: 0.024964403, g: 0.2587593, b: 0.4811321, a: 1}
+    - _TintColor: {r: 0.091625154, g: 0.6698113, b: 0.17961004, a: 1}

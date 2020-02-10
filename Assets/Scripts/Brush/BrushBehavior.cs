@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BrushBehavior : MonoBehaviour
 {
+    public bool doSound;
+    public bool doParticles;
+    public bool doLight;
+
     public AudioSource source;
     public ParticleSystem particles;
     public Material BurstMat;
@@ -29,9 +33,18 @@ public class BrushBehavior : MonoBehaviour
         StopAllCoroutines();
 
         BurstMat.SetColor("_TintColor", other.GetComponent<MeshRenderer>().sharedMaterial.color);
-        particles.Play();
-        source.Play();
-        StartCoroutine(LightAnimation());
+        if (doParticles)
+        {
+            particles.Play();
+        }
+        if (doSound)
+        {
+            source.Play();
+        }
+        if (doLight)
+        {
+            StartCoroutine(LightAnimation());
+        }
     }
 
     IEnumerator LightAnimation()
