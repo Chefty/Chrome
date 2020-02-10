@@ -6,11 +6,6 @@ public class ColliderActivator : MonoBehaviour
 {
     public int AmountPerFrame;
 
-    void Start()
-    {
-        StartCoroutine(ActivateCollider());
-    }
-
     IEnumerator ActivateCollider()
     {
         Physics.autoSimulation = false;
@@ -19,6 +14,24 @@ public class ColliderActivator : MonoBehaviour
         for (int i = 0; i < cols.Length; i++)
         {
             cols[i].enabled = true;
+
+            if (i % AmountPerFrame == 0)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+        Physics.autoSimulation = true;
+    }
+
+    IEnumerator DeActivateCollider()
+    {
+        Physics.autoSimulation = false;
+        Collider[] cols = GetComponentsInChildren<Collider>();
+
+        for (int i = 0; i < cols.Length; i++)
+        {
+            cols[i].enabled = false;
 
             if (i % AmountPerFrame == 0)
             {
