@@ -1,9 +1,6 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true" alt="Markdownify" width="600"></a>
-  <br>
-  Chrome
-  <br>
 </h1>
 
 <h4 align="center">A peaceful VR experience made with <a href="https://unity.com" target="_blank">Unity</a>.</h4>
