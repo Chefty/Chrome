@@ -1,9 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://globalgamejam.org/2020/games/chrome-0"><img src="https://ggj.s3.amazonaws.com/styles/game_sidebar__wide/featured_image/2020/02/138455/plan_de_travail_-_1.jpg?itok=bRw_KLzC&timestamp=1580720656" alt="Markdownify" width="200"></a>
-  <br>
-  Chrome
-  <br>
+  <a href="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true" alt="Markdownify" width="600"></a>
 </h1>
 
 <h4 align="center">A peaceful VR experience made with <a href="https://unity.com" target="_blank">Unity</a>.</h4>
@@ -60,9 +57,9 @@ Check out other projects on [Global Game Jam 2020 Toulouse](https://globalgameja
 
 ## Team
 
-[![Arghonot](https://avatars2.githubusercontent.com/u/15033813?v=3&s=144)](https://github.com/Arghonot)  |[![Zirtok](https://avatars2.githubusercontent.com/u/23333299?v=3&s=144)](https://github.com/Zirtok)  |[![Chefty](https://avatars0.githubusercontent.com/u/6494837?v=3&s=144)](https://github.com/Chefty)
----|---|---
-[Arghonot](https://github.com/Arghonot)  |[Zirtok](https://github.com/Zirtok)  |[Chefty](https://github.com/Chefty)
+[![Arghonot](https://avatars2.githubusercontent.com/u/15033813?v=3&s=144)](https://github.com/Arghonot)  |[![Zirtok](https://avatars2.githubusercontent.com/u/23333299?v=3&s=144)](https://github.com/Zirtok)  |[![Chefty](https://avatars0.githubusercontent.com/u/6494837?v=3&s=144)](https://github.com/Chefty)  |[![NataKhin](https://mir-s3-cdn-cf.behance.net/user/115/764af74977895.58908a4fd5cd5.jpeg?v=3&s=144)](https://www.behance.net/P_Martin)  |[![Pol](https://mir-s3-cdn-cf.behance.net/user/115/ad887e5108917.58cd42d6c211b.jpg?v=3&s=144)](https://www.behance.net/pol-ronnet)
+---|---|---|---|---
+[Arghonot](https://github.com/Arghonot)  |[Zirtok](https://github.com/Zirtok)  |[Chefty](https://github.com/Chefty)  |[NataKhin](https://www.behance.net/P_Martin)  |[Pol](https://www.behance.net/pol-ronnet)
 
 ## License
 
