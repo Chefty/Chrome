@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true" alt="Markdownify" width="600"></a>
+  <a href="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor1024x390.png?raw=true" alt="Markdownify" width="600"></a>
 </h1>
 
 <h4 align="center">A peaceful VR experience made with <a href="https://unity.com" target="_blank">Unity</a>.</h4>
@@ -50,14 +50,14 @@ This software uses the following open source packages:
 
 ## Context
 
-This project has been made during the Global Game Jam 2020.<br>
+This project has been made in 48 hours during the Global Game Jam 2020.<br>
 [Chrome project page](https://globalgamejam.org/2020/games/chrome-0)
 
 Check out other projects on [Global Game Jam 2020 Toulouse](https://globalgamejam.org/2020/jam-sites/campus-ionis-toulouse).
 
 ## Team
 
-[![Arghonot](https://avatars2.githubusercontent.com/u/15033813?v=3&s=144)](https://github.com/Arghonot)  |[![Zirtok](https://avatars2.githubusercontent.com/u/23333299?v=3&s=144)](https://github.com/Zirtok)  |[![Chefty](https://avatars0.githubusercontent.com/u/6494837?v=3&s=144)](https://github.com/Chefty)  |[![NataKhin](https://mir-s3-cdn-cf.behance.net/user/115/764af74977895.58908a4fd5cd5.jpeg?v=3&s=144)](https://www.behance.net/P_Martin)  |[![Pol](https://mir-s3-cdn-cf.behance.net/user/115/ad887e5108917.58cd42d6c211b.jpg?v=3&s=144)](https://www.behance.net/pol-ronnet)
+[![Arghonot](https://avatars2.githubusercontent.com/u/15033813?v=3&s=144)](https://github.com/Arghonot)  |[![Zirtok](https://avatars2.githubusercontent.com/u/23333299?v=3&s=144)](https://github.com/Zirtok)  |[![Chefty](https://avatars0.githubusercontent.com/u/6494837?v=3&s=144)](https://github.com/Chefty)  |[![NataKhin](https://mir-s3-cdn-cf.behance.net/user/115/764af74977895.58908a4fd5cd5.jpeg?v=3&s=144)](https://www.behance.net/P_Martin)  |[![Pol](https://mir-s3-cdn-cf.behance.net/user/115/614c6b5108917.5e5d29946175d.jpg?v=3&s=144)](https://www.behance.net/pol-ronnet)
 ---|---|---|---|---
 [Arghonot](https://github.com/Arghonot)  |[Zirtok](https://github.com/Zirtok)  |[Chefty](https://github.com/Chefty)  |[NataKhin](https://www.behance.net/P_Martin)  |[Pol](https://www.behance.net/pol-ronnet)
 
