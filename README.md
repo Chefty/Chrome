@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor.png?raw=true"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor1024x390.png?raw=true" alt="Markdownify" width="600"></a>
+  <a href="http://www.youtube.com/watch?v=107ZnNgu_Q0"><img src="https://github.com/Chefty/Chrome/blob/Dev/Assets/Textures/ChromeColor1024x390.png?raw=true" alt="Click to see more" width="600"></a>
 </h1>
 
 <h4 align="center">A peaceful VR experience made with <a href="https://unity.com" target="_blank">Unity</a>.</h4>
@@ -18,7 +18,6 @@
   <a href="#license">License</a>
 </p>
 
-<!---![screenshot](https://lien-vers-un-gif)--->
 # What is Chrome about ?
 <table>
 <tr>
